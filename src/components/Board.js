@@ -14,7 +14,7 @@ const initState = {
 		[], // col 5
 		[]	// col 6
 	],
-	turnNum: 0,
+	turnNum: 0,	
 	currPlayer: 'Purple',	// or Navy
 	winner: '' 				// or Purple or Navy or Tie
 }
