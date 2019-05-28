@@ -43,17 +43,13 @@ const checkDiagMatch = (start, board, player, x, y) => {
 	}
 	
 	for(let i = forwardX; i < board.length; i++) {
-		if (board[i][forwardY] === player) count++;
-		else count = 0;
-
+		board[i][forwardY] === player ? count++ : count = 0;
 		forwardY++;
-		
 		if (count === 4) return true;
 	}
-	
+	debugger;
 	count = 0;
 	// backward diagonal
-
 	if (x === 6 || y === 0) {
 		backwardX = x;
 		backwardY = y;
@@ -66,11 +62,8 @@ const checkDiagMatch = (start, board, player, x, y) => {
 	}
 
 	for (let i = backwardX; i >= 0; i--) {
-		if (board[i][backwardY] === player) count++;
-		else count = 0;
-
+		board[i][backwardY] === player ? count++ : count = 0;
 		backwardY++;
-
 		if (count === 4) return true;
 	}
 
